@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 class Overview extends React.Component {
     render() {
         return (
-            <View style={overviewStyles.overview}>
+            <View style={overviewStyles.overview} hitSlop={{ top: 20, bottom: 10, left: 0, right: 0 }}>
                 {this.props.weatherInfo}
             </View>
         )
@@ -13,8 +13,6 @@ class Overview extends React.Component {
 
 const overviewStyles = StyleSheet.create({
     overview: {        
-        flexDirection: 'column',
-        flex: 1,
         padding: 20
     }
 });
